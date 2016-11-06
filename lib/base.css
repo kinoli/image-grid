@@ -1,0 +1,42 @@
+#grid-holder { text-align: center; }
+
+#grid-holder ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+
+#grid-holder li {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    width: 25%;
+}
+
+#grid-holder li.drag {
+    opacity: 0.5;
+    pointer-events: none;
+    position: absolute;
+}
+
+#grid-holder li.highlight { background: #ccc; }
+
+#grid-holder li.highlight img { opacity: 0.2; }
+
+#grid-holder img {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+/* standard */
+@media screen and (max-width: 960px) { 
+    #grid-holder li { width: 33.3333%; }
+}
+
+/* mobile */
+@media screen and (max-width: 480px) { 
+    #grid-holder li { width: 50%; }
+}
